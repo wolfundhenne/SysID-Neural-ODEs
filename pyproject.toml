@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neuralsysid"
+version = "0.1.0"
+description = "Neural system identification for dynamical systems with Neural ODE style models."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Hannes Wolf" },
+]
+dependencies = [
+  "numpy",
+  "scipy",
+  "matplotlib",
+  "torch",
+  "torchdiffeq",
+  "torchvision",
+  "neuromancer",
+  "wandb",
+  "scikit-learn",
+  "pysindy",
+  "mlflow",
+  "optuna",
+  "optuna-dashboard",
+  "pymysql",
+  "cryptography",
+  "boto3",
+]
+
+[project.optional-dependencies]
+dev = [
+  "black",
+  "isort",
+  "jupyter",
+  "pylint",
+  "pytest",
+  "pytest-cov",
+  "pytest-xdist",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["neuralsysid*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.black]
+target-version = ["py310"]
+
+[tool.isort]
+profile = "black"

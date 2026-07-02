@@ -1,0 +1,33 @@
+# scientific computing and plotting
+numpy
+scipy
+matplotlib
+
+# deep learning
+torch
+torchdiffeq
+torchvision
+neuromancer
+wandb # temporary. Needs a fix from neuromancer in pip
+scikit-learn
+pysindy
+
+# testing frameworks
+pytest-xdist
+pytest-cov
+
+# code quality
+pylint
+black
+isort
+
+# logging
+mlflow
+optuna
+optuna-dashboard
+pymysql
+cryptography
+boto3
+
+# general
+jupyter
